@@ -17,10 +17,10 @@ pipeline {
         echo 'Deploying....'
       }
     }
-    post {
-        always {
-            junit '**/TEST-*.xml'
-        }
+  }
+  post {
+    always {
+        junit '**/TEST-*.xml'
     }
   }
 }
