@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
+        echo 'coucou'
       }
     }
     stage('Test') {
@@ -20,7 +21,9 @@ pipeline {
   }
   post {
     always {
-        junit '**/TEST-*.xml'
+      junit '**/TEST-*.xml'
+
     }
+
   }
 }
